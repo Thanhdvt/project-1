@@ -1,0 +1,34 @@
+Positive: Đỗ
+Negative: Trượt
+100 đỗ: 90 đúng đỗ + 10 sai trượt
+1000 trượt: 940 đúng trượt + 60 sai đỗ
+
+True positive: Dự đoán đúng -> đỗ   (90)
+False positive: Dự đoán sai -> đỗ   (60)
+True Negative: Dự đoán đúng -> trượt(940)
+False Negative: Dự đoán sai -> trượt (10)
+
+Thực tế
+Đỗ - trượt
+10 -10
+
+precision = đúng đỗ / (đúng đỗ + sai đỗ)
+-> thực sự có bao nhiêu dự đoán Positive là thật sự True
+
+recall = đúng đỗ/ (đúng đỗ + sai trượt)
+-> đo lường tỷ lệ dự báo chính xác các trường hợp positive 
+trên toàn bộ các mẫu thuộc nhóm positive
+
+f1-score: 2*recall*precision / (precision + recall)
+-> kết hợp cả Recall và Precision. 
+Giá trị của điểm F1 càng gần 1.0 
+thì hiệu suất mong đợi của mô hình càng cao
+
+Accuracy = (đúng đỗ + đúng trượt) / tổng
+
+Macro avg = 0.5 * số lớp 0 + 0.5 * số lớp 1
+Weighted avg = trọng số * số lớp 0 + trọng số * số lớp 1
+
+
+
+
